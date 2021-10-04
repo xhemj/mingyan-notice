@@ -1,0 +1,21 @@
+name: MingyanPush
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  push:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  mingyan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.4.1
+      - name: Run Scripts
+        run: |
+          npm install
+          node index.js mapkey="${{ secrets.MAP_KEY }}" uri="${{ secrets.MONGODB_URI }}" googlekey="${{ secrets.GOOGLE_API_KEY }}" feishukey="${{ secrets.FEISHU_KEY }}"

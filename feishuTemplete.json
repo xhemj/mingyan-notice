@@ -1,0 +1,110 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "config": {
+      "wide_screen_mode": false
+    },
+    "header": {
+      "template": "purple",
+      "title": {
+        "content": "🎉 耳斯名言新人打卡通知",
+        "tag": "plain_text"
+      }
+    },
+    "elements": [
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**姓名：**\n${name}"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**时间：**\n${time}"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**位置信息：**\n**IP**：${ip}\n**定位：**${ipFrom}"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**排名：**\n**${rank}**"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "fields": [
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**浏览器：**\n${browser}"
+            }
+          },
+          {
+            "is_short": true,
+            "text": {
+              "tag": "lark_md",
+              "content": "**设备：**\n${device}"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "text": {
+          "tag": "lark_md",
+          "content": "**UA：**${ua}\n**IP定位图：**${ipLocationPic}"
+        }
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "plain_text",
+            "content": "备注：\n1.所有显示时间均需加8小时才是北京时间\n2.IP定位图使用的数据为海外版数据，位置仅供参考"
+          }
+        ]
+      },
+      {
+        "tag": "hr"
+      },
+      {
+        "tag": "note",
+        "elements": [
+          {
+            "tag": "img",
+            "img_key": "img_v2_deb9cf0a-7a73-404f-8f36-59b37fad097g",
+            "alt": {
+              "tag": "plain_text",
+              "content": ""
+            }
+          },
+          {
+            "tag": "plain_text",
+            "content": " © ${year} 耳斯名言 | 消息发送时间：${sendTime} | 版本：1.0"
+          }
+        ]
+      }
+    ]
+  }
+}
