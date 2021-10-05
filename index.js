@@ -128,7 +128,7 @@ function getInputStr(str) {
         }
       );
       shortLink = shortLink.data.shortLink;
-      shortLink = shortLink.split("//")[1];
+      shortLink = shortLink.replace("https://", "http://");
     }
     if (ipv6Reg.test(ip)) shortLink = "暂无数据（ipv6 格式暂无经纬度数据）";
     // log({ shortLink });
