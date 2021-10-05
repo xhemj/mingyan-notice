@@ -47,7 +47,7 @@ function getInputStr(str) {
   //   `center=[lat],[lng]8&markers=color:red|size:large|[lat],[lng]`,
   // ].join("&");
   const staticMapApiUrl = [
-    "https://file.xhemj.top/https://api.mapbox.com/styles/v1/xhemj/cku588hlo06g618p4oxb5vio5/static",
+    "https://api.mapbox.com/styles/v1/xhemj/cku588hlo06g618p4oxb5vio5/static",
     `pin-s+ff0000([lng],[lat])/[lng],[lat],10,0`,
     `500x300@2x?access_token=${mapKey}`,
   ].join("/");
@@ -128,6 +128,7 @@ function getInputStr(str) {
         }
       );
       shortLink = shortLink.data.shortLink;
+      shortLink = shortLink.split("//")[1];
     }
     if (ipv6Reg.test(ip)) shortLink = "暂无数据（ipv6 格式暂无经纬度数据）";
     // log({ shortLink });
