@@ -100,7 +100,7 @@ function getInputStr(str) {
       // 图片链接
       imgUrl = staticMapApiUrl
         .replace(/\[lat\]/gi, lat)
-        .replace(/\[lng\]/gi, lng);
+        .replace(/\[lng\]/gi, lng)
         .replace(/\[text\]/gi, address);
     } else if (ipv6Reg.test(ip)) {
       let res = await axios.get(
