@@ -51,7 +51,7 @@ function getInputStr(str) {
   //   `pin-s+ff0000([lng],[lat])/[lng],[lat],10,0`,
   //   `500x300?access_token=${mapKey}`,
   // ].join("/");
-  const staticMapApiUrl = `https://xhemj.top/_map?lat=[lat]&lng=[lng]`;
+  const staticMapApiUrl = `https://xhemj.top/_map?lng=[lat]&lng=[lat]`; // 写反了23333，先用着吧
 
   const client = await MongoClient.connect(DBUri, {
     useNewUrlParser: true,
