@@ -46,11 +46,12 @@ function getInputStr(str) {
   //   "size=500*300&scale=2&zoom=10",
   //   `center=[lat],[lng]8&markers=color:red|size:large|[lat],[lng]`,
   // ].join("&");
-  const staticMapApiUrl = [
-    "https://api.mapbox.com/styles/v1/xhemj/cku588hlo06g618p4oxb5vio5/static",
-    `pin-s+ff0000([lng],[lat])/[lng],[lat],10,0`,
-    `500x300?access_token=${mapKey}`,
-  ].join("/");
+  // const staticMapApiUrl = [
+  //   "https://api.mapbox.com/styles/v1/xhemj/cku588hlo06g618p4oxb5vio5/static",
+  //   `pin-s+ff0000([lng],[lat])/[lng],[lat],10,0`,
+  //   `500x300?access_token=${mapKey}`,
+  // ].join("/");
+  const staticMapApiUrl = `https://xhemj.top/_map?lat=[lat]&lng=[lng]`;
 
   const client = await MongoClient.connect(DBUri, {
     useNewUrlParser: true,
