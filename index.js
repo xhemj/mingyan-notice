@@ -51,7 +51,7 @@ function getInputStr(str) {
   //   `pin-s+ff0000([lng],[lat])/[lng],[lat],10,0`,
   //   `500x300?access_token=${mapKey}`,
   // ].join("/");
-  const staticMapApiUrl = `https://xhemj.top/_map?lng=[lat]&lat=[lng]`; // 写反了23333，先用着吧
+  const staticMapApiUrl = `https://xhemj.top/_map?lat=[lat]&lng=[lng]&text=[text]`;
 
   const client = await MongoClient.connect(DBUri, {
     useNewUrlParser: true,
@@ -101,6 +101,7 @@ function getInputStr(str) {
       imgUrl = staticMapApiUrl
         .replace(/\[lat\]/gi, lat)
         .replace(/\[lng\]/gi, lng);
+        .replace(/\[text\]/gi, address);
     } else if (ipv6Reg.test(ip)) {
       let res = await axios.get(
         `https://file.xhemj.top/https://ip.zxinc.org/api.php?type=json&ip=${ip}`
