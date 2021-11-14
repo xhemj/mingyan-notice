@@ -157,6 +157,8 @@ function getInputStr(str) {
     await dbo.deleteOne({
       rid: rid,
     });
+    
+    log("推送成功：" + name);
   }
   client.close();
 })();
